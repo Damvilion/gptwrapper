@@ -6,8 +6,10 @@ import { Button } from '@/app/components/ui/button';
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useRouter } from 'next/navigation';
 
 export default function CustomerLoginComponent() {
+    const router = useRouter();
     const formSchema = z.object({
         username: z.string().min(2, {
             message: 'Username must be at least 2 characters.',
@@ -29,7 +31,9 @@ export default function CustomerLoginComponent() {
 
         try {
             const res = await signInWithEmailAndPassword(FirebaseAuth, username, password);
-            console.log(res);
+            if (res) {
+                router.push('/');
+            }
         } catch (error) {
             console.log(error);
         }
