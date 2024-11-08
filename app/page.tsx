@@ -10,7 +10,6 @@ export default function Home() {
 
     const getUser = async () => {
         const res = await current_profile();
-
         if (res) {
             router.push('/');
         } else {

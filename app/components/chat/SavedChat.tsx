@@ -4,6 +4,7 @@ export default function SavedChat({ title }: { title: string }) {
     return (
         <li className='relative list-none hover:bg-slate-600'>
             <div className='no-draggable group relative rounded-lg active:opacity-90 bg-token-sidebar-surface-secondary flex items-center justify-between'>
+                <Dots />
                 <a href='' className='flex flex-1 items-center gap-2 p-2 mr-auto cursor-pointer'>
                     <div className='relative grow overflow-hidden whitespace-nowrap text-white'>
                         {title}
@@ -11,7 +12,6 @@ export default function SavedChat({ title }: { title: string }) {
                     </div>
                 </a>
                 {/* <HiOutlineDotsHorizontal color='white' className='cursor-pointer' /> */}
-                <Dots />
             </div>
         </li>
     );

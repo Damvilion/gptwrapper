@@ -2,6 +2,7 @@ import React, { useState, ChangeEvent } from 'react';
 import { IoMdAttach } from 'react-icons/io';
 import { IoSend } from 'react-icons/io5';
 import { MdCancel } from 'react-icons/md';
+import UserAuthAvatar from './avatar/UserAuthAvatar';
 
 export default function ChatBox() {
     const [file, setFile] = useState<File | null>(null);
@@ -24,6 +25,7 @@ export default function ChatBox() {
 
     return (
         <div className='relative flex h-full max-w-full flex-1 flex-col overflow-hidden'>
+            <UserAuthAvatar />
             <main className='bg-slate-700 relative h-full w-full flex-1 overflow-auto transition-width'>
                 <div className='composer-parent flex h-full flex-col focus-visible:outline-0'>
                     <div className='flex-1 overflow-hidden'>

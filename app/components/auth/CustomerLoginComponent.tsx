@@ -69,7 +69,7 @@ export default function CustomerLoginComponent() {
                     )}
                 />
                 <Button type='submit' className='flex justify-center'>
-                    Submit
+                    login
                 </Button>
             </form>
         </Form>
