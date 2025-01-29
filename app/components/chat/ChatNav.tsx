@@ -68,7 +68,7 @@ export default function ChatNav() {
                             ))}
                         </ol> */}
 
-                        <ol>{userChat ? userChat.chats.map((index) => <SavedChat title={index.title} key={index.id} />) : null}</ol>
+                        <ol>{userChat ? userChat.chats.map((chat) => <SavedChat title={chat.title} key={chat.id} url={chat.url} />) : null}</ol>
                     </nav>
                 </div>
             </div>
